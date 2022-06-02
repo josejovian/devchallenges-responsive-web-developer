@@ -1,0 +1,116 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	font-family: "Poppins";
+}
+
+body {
+	width: 64vw;
+	padding: 4rem 0 0 0;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: "PT Serif";
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	width: 64vw;
+	margin-top: 4rem;
+}
+
+main section {
+	flex-grow: 1;
+}
+
+header h2 {
+	margin: 0;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.person:nth-child(3n-1) {
+	margin: 0 4rem;
+	margin-top: 4rem;
+}
+
+.person {
+	position: relative;
+	flex-basis: 26%;
+}
+
+.person-title {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	
+	width: max-content;
+
+	font-family: "PT Serif";
+	text-transform: uppercase;
+	transform-origin: 0 0;
+	transform: rotate(90deg);
+}
+
+.person-identity {
+	display: flex;
+	flex-direction: column;
+}
+
+.person-identity span {
+	margin-top: 1rem;
+	font-weight: 800;
+}
+
+.person-identity img {
+	width: calc(100% - 2rem);
+}
+
+footer {
+	width: calc(100% - 16rem);
+	padding: 2rem 8rem;
+
+	text-align: center;
+}
+
+footer * {
+	color: #444;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	header {
+		flex-direction: column;
+	}
+	main {
+		width: 100%;
+	}
+	body {
+		width: calc(100% - 4rem);
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	.person {
+		flex-basis: 34%;
+		margin: 0;
+	}
+	.person:nth-child(3n-1) {
+		margin: 0;
+	}
+	.person:nth-child(2n) {
+		margin: 0 4rem;
+		margin-top: 4rem;
+	}
+}
