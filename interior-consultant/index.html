@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Interior Consultant</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&family=Lora&family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<nav>
+			<span id="logo">
+				THIS INTERIOR
+			</span>
+			<ul id="links" class="links">
+				<li class="link-active">
+					Home
+				</li>
+				<li>
+					Collection
+				</li>
+				<li>
+					About
+				</li>
+				<li>
+					Contact
+				</li>
+			</ul>
+			<button id="menu-open" class="nav-toggle material-symbols-outlined" onClick="openNavbar()">
+				menu
+			</button>
+			<button id="menu-close" class="nav-toggle material-symbols-outlined" onClick="closeNavbar()">
+				close
+			</button>
+			<section id="links-wrapper-mobile">
+				<ul id="links-mobile" class="links">
+					<li class="link-active">
+						Home
+					</li>
+					<li>
+						Collection
+					</li>
+					<li>
+						About
+					</li>
+					<li>
+						Contact
+					</li>
+				</ul>
+			</section>
+		</nav>
+		<main>
+			<section id="text-wrapper">
+				<h1>Modern Interior</h1>
+				<p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+				<span>Read more →</span>
+			</section>
+			<section id="featured-wrapper">
+				<img id="featured" src="photo1.png" />
+				<article id="featured-card">
+					<section id="featured-owner">
+						<img src="photo2.png" alt="User" />
+						<div class="identity">
+							<span class="name">
+								Aliza Webber
+							</span>
+							<span class="role">
+								Interior designer
+							</span>
+						</div>
+					</section>
+					<p>
+						Designed in 2020 by<br />Aliza Webber
+					</p>
+				</article>
+			</section>
+		</main>
+		<footer>
+			created by <a href="https://github.com/josejovian">josejovian</a> - <a href="https://devchallenges.io/">devChallenges.io</a>
+		</footer>
+	</body>
+	<script>
+		const 
+			_open = document.getElementById("menu-open"),
+			_close = document.getElementById("menu-close"),
+			_wrapper = document.getElementById("links-wrapper-mobile"),
+			_body = document.querySelector("body");
+
+		function openNavbar() {
+			_open.classList.toggle("none");
+			_close.classList.toggle("show");	
+			_body.style.overflow = "hidden";
+			_wrapper.style.display = "flex";
+			_wrapper.classList.toggle("links-wrapper-shown");
+		}
+
+		function closeNavbar() {
+			_open.classList.toggle("none");
+			_close.classList.toggle("show");
+			_close.style.position = "initial";
+			_body.style.overflow = "initial";
+			_wrapper.style.display = "none";
+			_wrapper.classList.toggle("links-wrapper-shown");
+
+		}
+	</script>
+</html>

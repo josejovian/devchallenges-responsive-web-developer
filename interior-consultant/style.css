@@ -1,0 +1,227 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background: #181719;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 4rem;
+}
+
+* {
+	font-family: "Montserrat";
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem;
+	height: calc(100vh - 32rem);
+}
+
+main > section {
+	flex-grow: 1;
+	flex-basis: 49%;
+}
+
+#logo {
+	padding: 0.5rem;
+	border: 1px solid white;
+	color: white;
+	font-family: Crimson Pro;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+
+.nav-toggle {
+	display: none;
+	padding: 0.5rem 0;
+	z-index: 20;
+}
+
+button {
+	border: 0;
+	background: 0;
+}
+
+#links-wrapper-mobile {
+	display: none;
+	z-index: 15;
+}
+
+.links-wrapper-shown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100vw;
+	height: 100vh;
+
+	background: #181719;
+}
+
+.links {
+	display: flex;
+	margin: 0;
+
+	list-style: none;
+}
+
+.links li {
+	padding: 0.5rem 0;
+	margin: 0 1rem;
+}
+
+.link-active {
+	font-weight: 800;
+	border-bottom: 2px solid white;
+}
+
+section h1 {
+	margin: 0;
+	font-size: 4rem;
+	font-family: "Lora";
+}
+
+section p {
+	font-size: 1.5rem;
+}
+
+#text-wrapper p {
+	width: 75%;
+}
+
+section span {
+	font-weight: 800;
+	font-size: 1.125rem;
+}
+
+#featured-card {
+	position: absolute;
+	right: 2rem;
+	bottom: -5rem;
+	width: 50%;
+	padding: 1rem 2rem;
+	margin: 0 auto;
+	background: #181719;
+}
+
+#featured-wrapper {
+	position: relative;
+}
+
+#featured-owner {
+	display: flex;
+}
+
+.identity {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.identity .name {
+	font-size: 14px;
+	line-height: 17.07px;
+}
+
+.identity .role {
+	font-size: 12px;
+	line-height: 17.07px;
+	color: #828282;
+}
+
+#featured-owner img {
+	margin-right: 1rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+}
+
+#featured-card p {
+	font-family: "Lora";
+	font-weight: 800;
+}
+
+#featured {
+	width: 100%;
+}
+
+footer {
+	width: calc(100% - 16rem);
+	padding: 2rem 8rem;
+
+	text-align: center;
+}
+
+.material-symbols-outlined {
+	font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48;
+}
+
+.show {
+	display: flex!important;
+}
+
+.none {
+	display: none!important;
+}
+
+@media only screen and (max-width: 1000px) {
+	main {
+		flex-direction: column;
+		justify-content: flex-start;
+		height: max-content;
+	}
+
+	#featured {
+		margin-top: 8rem;
+	}
+
+	nav {
+		padding: 2rem 4rem;
+	}
+
+	#links {
+		display: none;
+	}
+
+	#links-mobile {
+		align-items: center;
+		flex-direction: column;
+		
+		margin: 0;
+	}
+
+	#links-mobile li {
+		font-size: 1.6rem;
+		margin: 1rem 0;
+	}
+
+	#menu-close {
+		display: none;
+	}
+
+	.nav-toggle {
+		display: block;
+		top: 1.8rem;
+		right: 4rem;
+	}
+}
