@@ -26,7 +26,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	padding: 4rem;
-	height: calc(100vh - 32rem);
+	height: calc(100vh - 24rem);
 }
 
 main > section {
