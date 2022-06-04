@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkout Page</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+	<h1>Checkout</h1>
+	<section id="main-content">
+		<main>
+			<form id="form" onSubmit="submit(e)">
+				<section>
+					<h2>Contact information</h2>
+					<article class="field-wrapper">
+						<label class="field-label" for="email">E-mail</label>
+						<div class="field">
+							<span class="material-symbols-outlined">
+								mail
+							</span>
+							<input id="email" type="email" placeholder="Enter your email..." required/>
+						</div>
+					</article>
+					<article class="field-wrapper">
+						<label class="field-label" for="phone">Phone</label>
+						<div class="field">
+							<span class="material-symbols-outlined">
+								phone
+							</span>
+							<input id="phone" type="tel" placeholder="Enter your phone..." required/>
+						</div>
+					</article>
+				</section>
+				<section>
+					<h2>Shipping address</h2>
+					<article class="field-wrapper">
+						<label class="field-label" for="name">Full name</label>
+						<div class="field">
+							<span class="material-symbols-outlined">
+								account_circle
+							</span>
+							<input id="name" type="text" placeholder="Enter your name..." required/>
+						</div>
+					</article>
+					<article class="field-wrapper">
+						<label class="field-label" for="phone">Address</label>
+						<div class="field">
+							<span class="material-symbols-outlined">
+								home
+							</span>
+							<input id="address" type="text" placeholder="Your address..." required/>
+						</div>
+					</article>
+					<article class="field-wrapper">
+						<label class="field-label" for="phone">City</label>
+						<div class="field">
+							<span class="material-symbols-outlined">
+								apartment
+							</span>
+							<input id="city" type="text" placeholder="Your city..." required/>
+						</div>
+					</article>
+					<section class="field-group">
+						<article class="field-wrapper">
+							<label class="field-label" for="phone">Country</label>
+							<div class="field">
+								<span class="material-symbols-outlined">
+									public
+								</span>
+								<input list="country-list" id="country" type="text" placeholder="Your country..." required/>
+								<datalist id="country-list">
+									<option value="Country 1">
+									<option value="Country 2">
+									<option value="Country 3">
+								</datalist>
+							</div>
+						</article>
+						<article class="field-wrapper">
+							<label class="field-label" for="phone">Postal code</label>
+							<div class="field">
+								<span class="material-symbols-outlined">
+									markunread_mailbox
+								</span>
+								<input id="postal" type="text" placeholder="Your postal code..." required/>
+							</div>
+						</article>
+					</section>
+	
+				</section>
+				<section id="save-wrapper">
+					<input id="save" type="checkbox" />
+					<label for="save">
+						Save this information for next time
+					</label>
+				</section>
+				<section id="continue-wrapper">
+					<button id="continue" type="submit">
+						Continue
+					</button>
+				</section>
+			</form>
+		</main>
+		<aside>
+			<section id="cart">
+				<article class="item" id="vintage-backbag">
+					<img src="photo1.png" />
+					<div class="item-desc">
+						<h3>Vintage Backbag</h3>
+						<div class="item-price">
+							<span class="item-price-new">$54.99</span>
+							<span class="item-price-old">$94.99</span>
+						</div>
+						<div class="item-quantity-wrapper">
+							<button onClick="minQty(0)">
+								-
+							</button>
+							<span id="vintage-backbag-qty" class="item-quantity">
+								1
+							</span>
+							<button onClick="addQty(0)">
+								+
+							</button>
+						</div>
+					</div>
+				</article>
+				<article class="item" id="levi-shoes">
+					<img src="photo2.png" />
+					<div class="item-desc">
+						<h3>Levi Shoes</h3>
+						<div class="item-price">
+							<span class="item-price-new">$74.99</span>
+							<span class="item-price-old">$124.99</span>
+						</div>
+						<div class="item-quantity-wrapper">
+							<button onClick="minQty(1)">
+								-
+							</button>
+							<span id="levi-shoes-qty" class="item-quantity">
+								1
+							</span>
+							<button onClick="addQty(1)">
+								+
+							</button>
+						</div>
+					</div>
+				</article>
+				<article id="cart-desc">
+					<hr />
+					<article class="entry">
+						<span>
+							Shipping
+						</span>
+						<span>
+							$19
+						</span>
+					</article>
+					<hr />
+					<article class="entry">
+						<span>
+							Total
+						</span>
+						<span id="grand-total">
+							$148.98
+						</span>
+					</article>
+				</article>
+			</section>
+		</aside>
+	</section>
+	<footer>
+		created by <a href="https://github.com/josejovian">josejovian</a> - <a href="https://devchallenges.io/">devChallenges.io</a>
+	</footer>
+</body>
+<script>
+	var prices = [ 54.99, 74.99 ];
+	var qty = [ 1, 1 ];
+	var shipping = 19;
+	var total = shipping;
+
+	function updatePrice() {
+		total = shipping;
+		qty.forEach((item, index) => {
+			total += item*prices[index];
+		});
+
+		total = Math.floor(total * 100)/100;
+
+		document.getElementById("grand-total").innerHTML = `$${total}`;
+	}
+
+	function getItem(id) {
+		id = parseInt(id);
+
+		let name;
+		switch(id) {
+			case 0:
+				name = "vintage-backbag-qty";
+				break;
+			case 1:
+				name = "levi-shoes-qty";
+				break;
+		}
+
+		return document.getElementById(name);
+	}
+
+	function minQty(id) {
+		const element = getItem(id);
+
+		if(qty[id] > 0)
+			qty[id]--;
+		
+		element.innerHTML = qty[id];
+		
+		updatePrice();
+	}
+
+	function addQty(id) {
+		const element = getItem(id);
+
+		if(qty[id] < 100)
+			qty[id]++;
+
+		element.innerHTML = qty[id];
+
+		updatePrice();
+	}
+
+	const form = document.getElementById("form");
+	form.addEventListener('submit', submit);
+
+	function submit(e) {
+		console.log(e);
+		alert("OK!");
+	}
+</script>
+</html>
