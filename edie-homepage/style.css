@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Poppins:wght@400;500&display=swap');
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+* {
+	font-family: "Poppins";
+}
+
+#links-toggle {
+	display: none;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	padding: 2rem 8rem;
+}
+
+.edie {
+	font-size: 2rem;
+	font-family: "Heebo";
+}
+
+nav .links {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+
+	margin: 0;
+}
+
+nav a {
+	color: black;
+}
+
+.links li {
+	padding: 1rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	padding: 0 8rem;
+}
+
+#pre-hero {
+	color: #2D9CDB;
+}
+
+#hero {
+	margin-left: -4rem;
+	width: calc(100vw - 9rem);
+	border-radius: 1rem;
+}
+
+h1, h2, h3 {
+	font-weight: 500;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+input:focus, input:active {
+	outline: 0;
+}
+
+.page-section {
+	margin-top: 16rem;
+	margin-bottom: 16rem;
+}
+
+#section-story {
+	width: 50%
+}
+
+.email-invitation {
+	font-size: 14px;
+	color: #828282;
+}
+
+.email-wrapper {
+	position: relative;
+	width: 100%;
+}
+
+#section-story .email-wrapper {
+	width: 60%;
+}
+
+.email-input {
+	padding: 1rem;
+	width: 100%;
+	background: #F2F2F2;
+	border: 0;
+	border-radius: 0.5rem;
+}
+
+.button {
+	padding: 0.5rem 1rem;
+	border: 0;
+	border-radius: 0.5rem;
+	background: #2D9CDB;
+	color: white;
+}
+
+.email-join {
+	position: absolute;
+	top: 0.5rem;
+	right: -1.5rem;
+}
+
+.page-section h2 {
+	width: 50%;
+	margin-left: -4rem;
+}
+
+.card {
+	padding: 2rem;
+}
+
+.card h3 {
+	font-weight: 700;
+}
+
+.card-group {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+.card-icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	padding: 1rem;
+	color: white;
+	background-color: #2D9CDB;;
+	border-radius: 1rem;
+}
+
+#ui-ux .card-icon {
+	background-color: #2D9CDB;;
+}
+
+#front-end .card-icon {
+	background-color: #27AE60;
+}
+
+#back-end .card-icon {
+	background-color: #EB5757;
+	
+}
+
+.card button {
+	background: #E0E0E0;
+	color: #828282;
+	transition: all 0.5s;
+}
+
+.card:hover {
+	box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+}
+
+.project-type {
+	margin-top: 1rem;
+	font-size: 14px;
+	color: #828282;
+}
+
+.card:hover button {
+	background: #2D9CDB;
+	color: white;
+}
+
+#projects > section {
+	width: calc(100% + 8rem);
+	margin-left: -4rem
+}
+
+.project-row {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+}
+
+#project-more {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #2D9CDB;
+	font-weight: 500;
+}
+
+.project:first-child {
+	margin-top: 8rem;
+}
+
+.project {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.project img {
+	border-radius: 1rem;
+}
+
+.project h3 {
+	margin: 0;
+}
+
+#section-team {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: calc(100vw - 12rem);
+}
+
+#section-team-slogan {
+	color: #EB5757;
+}
+
+#section-team span {
+	margin-left: -4rem;
+}
+
+#section-team h2 {
+	width: 50%;
+}
+
+#section-team-photo {
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	width: 50%;
+	height: 100%;
+}
+
+#section-team-photo-1 {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: fit-content;
+	margin: 0;
+}
+
+#section-team-photo-2 img:first-child {
+	width: 75%;
+}
+
+#section-team-photo img {
+	width: 100%;
+	border-radius: 1.5rem;
+}
+
+#section-team-photo div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+}
+
+#clients {
+	margin-left: -4rem;
+	margin-bottom: 4rem;
+	font-size: 3rem;
+}
+
+#client-wrapper {
+	display: flex;
+	gap: 1rem;
+}
+
+#client-wrapper img {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 0.75rem;
+}
+
+#client-profile {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+}
+
+#client-name {
+	font-size: 1.5rem;
+}
+
+#client-desc {
+	font-size: 1rem;
+	color: #828282;
+}
+
+#pre-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 100%;
+	background: #100E1D;
+	color: #FFFFFF;
+}
+
+#pre-footer label {
+	color: #F2F2F2;
+}
+
+#pre-footer > section {
+	padding: 4rem;
+}
+
+#pre-footer .edie {
+	font-size: 2rem;
+}
+
+#pre-footer ul {
+	margin: 0;
+	list-style-type: none;
+	line-height: 200%;
+}
+
+#pre-footer a {
+	color: white;
+}
+
+footer {
+	width: calc(100% - 16rem);
+	padding: 2rem 8rem;
+
+	background-color: #100E1D;
+	color: white;
+	text-align: center;
+}
+
+footer a {
+	color: white;
+}
+
+#links-mobile {
+	display: none
+}
+
+.show {
+	display: flex !important;
+}
+
+@media only screen and (max-width: 1000px) {
+	nav {
+		padding: 2rem;
+	}
+	nav > .links {
+		display: none;
+	}
+	nav .links {
+		flex-direction: column;
+	}
+	#links-toggle {
+		position: fixed;
+		top: 2.6rem;
+		right: 2rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 36px;
+		border: 0;
+		border-radius: 0.5rem;
+		background: white;
+		box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+		z-index: 30;
+	}
+	#links-mobile {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		border: 0;
+		background: white;
+		font-size: 2rem;
+		z-index: 20;
+	}
+	main {
+		padding: 0 2rem;
+	}
+	#hero {
+		margin-left: 0rem;
+		width: calc(100vw - 5rem);
+		border-radius: 1rem;
+	}
+	h1,h2,h3 {
+		margin-left: 0 !important;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+	h2,h3 {
+		font-size: 2rem;
+	}
+	.page-section {
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+	#section-story {
+		width: 100%;
+	}
+	.card-group {
+		flex-direction: column;
+	}
+	.project {
+		width: 100%;
+	}
+	.project-row {
+		flex-direction: column;
+	}
+	#project-more {
+		bottom: -2rem;
+	}
+	#section-team {
+		flex-direction: column;
+		margin: 0;
+		width: 100%;
+	}
+	#section-team-photo {
+		position: static;
+		margin-top: 4rem;
+	}
+	#section-team section {
+		width: 100%;
+	}
+	#section-team span {
+		margin-left: 0;
+	}
+	#projects section {
+		margin-left: 0;
+		width: 100%;
+	}
+	.project:first-child {
+		margin-top: 0rem;
+	}
+	#clients {
+		margin-left: 0;
+	}
+	#testi {
+		font-size: 2rem;
+	}
+	#pre-footer {
+		flex-direction: column;
+	}
+	#pre-footer > section {
+		padding: 2rem 4rem;
+	}
+	#pre-footer .email-wrapper {
+		width: calc(100% - 4rem);
+	}
+	#pre-footer ul {
+		padding: 0;
+	}
+}
