@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/devchallenges-responsive-web-developer/portfolio/static/css/main.a353dd7a.css",
+    "main.js": "/devchallenges-responsive-web-developer/portfolio/static/js/main.c86633b4.js",
+    "static/js/787.b7af92ad.chunk.js": "/devchallenges-responsive-web-developer/portfolio/static/js/787.b7af92ad.chunk.js",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/devchallenges-responsive-web-developer/portfolio/static/media/Montserrat-VariableFont_wght.3068cdb43142f5625baf.ttf",
+    "index.html": "/devchallenges-responsive-web-developer/portfolio/index.html",
+    "main.a353dd7a.css.map": "/devchallenges-responsive-web-developer/portfolio/static/css/main.a353dd7a.css.map",
+    "main.c86633b4.js.map": "/devchallenges-responsive-web-developer/portfolio/static/js/main.c86633b4.js.map",
+    "787.b7af92ad.chunk.js.map": "/devchallenges-responsive-web-developer/portfolio/static/js/787.b7af92ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a353dd7a.css",
+    "static/js/main.c86633b4.js"
+  ]
+}
