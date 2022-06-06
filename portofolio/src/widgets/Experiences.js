@@ -2,7 +2,7 @@ import Card from "../components/Card";
 
 const Entry = ({ time, role, company, desc }) => {
 	return (
-		<article className="flex mt-4 w-full h-full h-2 gap-4">
+		<article className="flex mt-4 w-full h-full gap-4">
 			<section className="mt-4">
 				<img className="w-32" src={company} alt="company logo" />
 			</section>
